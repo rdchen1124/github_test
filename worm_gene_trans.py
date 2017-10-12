@@ -6,8 +6,8 @@ worm_gene_tran={}
 worm_gene=[]# [elegans:20225,brenneri:30659,briggsae:22366,remanei:31436]
 worm_tran=[]# [elegans:33334,brenneri:30744,briggsae:26169,remanei:31526]
 specie=sys.argv[1]
-input_file="genes_transcript_brenneri.tsv"
-output_file="worm_gene_brenneri.csv"
+input_file="genes_transcript_"+specie+".tsv"
+output_file="worm_gene_"+specie+".csv"
 with open(input_file, "r") as f:
 	for row in f:
 		row_list=row.rstrip('\r\n').split('\t')
